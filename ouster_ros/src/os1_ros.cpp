@@ -31,7 +31,7 @@ sensor_msgs::Imu packet_to_imu_msg(const PacketMsg& p,
     const uint8_t* buf = p.buf.data();
 
     // m.header.stamp.fromNSec(imu_gyro_ts(buf));
-    msg.header.stamp = ros::Time::now();
+    m.header.stamp = ros::Time::now();
 
     m.header.frame_id = frame;
 
